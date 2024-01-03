@@ -60,5 +60,46 @@ and (substring(CITY,-1,1) in ('a','e','i', 'o', 'u'));
 -- select DISTINCT CITY from STATION 
 -- where (CITY REGEXP '^[AEIOU].*[aeiou]$');
 
+-- Weather Observation Station 9
+select DISTINCT CITY from STATION
+where CITY not like 'A%' 
+and CITY not like 'E%' and CITY not like 'I%'
+and CITY not like 'O%' and CITY not like 'U%'
+
+-- Weather Observation Station 10
+select DISTINCT CITY from STATION
+where CITY not like '%A'
+and CITY not like '%E' and CITY not like '%I'
+and CITY not like '%O' and CITY not like '%U'
+
+-- Weather Observation Station 11
+select DISTINCT CITY from STATION
+where (CITY not like 'A%' 
+and CITY not like 'E%' and CITY not like 'O%'
+and CITY not like 'I%' and CITY not like 'U%')
+or (CITY not like '%A' and CITY not like '%E' 
+and CITY not like '%I' and CITY not like '%O'
+and CITY not like '%U')
+
+-- Weather Observation Station 12
+SELECT DISTINCT CITY FROM STATION 
+WHERE CITY NOT LIKE 'A%' AND CITY NOT LIKE 'E%' 
+AND CITY NOT LIKE 'I%' AND CITY NOT LIKE 'O%'
+AND CITY NOT LIKE 'U%' AND CITY NOT LIKE '%A'
+AND CITY NOT LIKE '%E' AND CITY NOT LIKE '%I'
+AND CITY NOT LIKE '%O' AND CITY NOT LIKE '%U'
+
+-- * or
+-- SELECT DISTINCT CITY FROM STATION 
+-- WHERE CITY NOT REGEXP '^(A|E|I|O|U)|.*(A|E|I|O|U)$';
+
+-- Weather Observation Station 13
+SELECT ROUND(SUM(LAT_N),4) FROM STATION
+WHERE LAT_N > 38.7880 AND LAT_N<137.2345;
+
+-- Weather Observation Station 14
+SELECT ROUND(MAX(LAT_N),4) FROM STATION
+WHERE LAT_N < 137.2345
+
 
 
