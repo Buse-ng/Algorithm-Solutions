@@ -92,3 +92,27 @@ function vowelsAndConsonants(s) {
         }
     }
 }
+
+//* Day 3: Arrays
+function getSecondLargest(nums) {
+    let _max=nums[0];
+    let second_max=0;
+    for(let item of nums){
+        if(_max<item){
+            second_max=_max;
+            _max=item;
+        }
+        else if(item>second_max && item!==_max){
+            second_max=item;
+        }
+    }
+    return second_max;
+}
+
+//* Day 4: Create a Rectangle Object
+function Rectangle(a, b) {
+    this.length=a;
+    this.width=b;
+    this.perimeter=2*(this.length+this.width);
+    this.area=this.length*this.width;
+}
