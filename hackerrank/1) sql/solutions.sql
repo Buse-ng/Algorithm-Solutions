@@ -134,4 +134,9 @@ SELECT Name FROM STUDENTS
 WHERE Marks>75
 ORDER BY RIGHT(Name, 3), ID ASC;
 
+--* Average Population
+SELECT ROUND(AVG(POPULATION))FROM CITY
 
+--* Revising Aggregations - Averages
+SELECT AVG(POPULATION) FROM CITY
+WHERE DISTRICT='California'
