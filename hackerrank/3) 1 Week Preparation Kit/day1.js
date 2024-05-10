@@ -23,6 +23,19 @@ function plusMinus(arr) {
 const arr = [-4, 3, -9, 0, 4, 1];
 console.log(plusMinus(arr));
 
+// or
+//     arr.forEach(num => {
+//      if (num > 0) {
+//         positiveCount++;
+//      } else if (num < 0) {
+//         negativeCount++;
+//      } else {
+//         zeroCount++;
+//      }
+//     });
+
+
+
 //* Mini-Max Sum
 
 function miniMaxSum(arr) {
@@ -43,7 +56,7 @@ function miniMaxSum(arr) {
 const arr = [1, 2, 3, 4, 5];
 console.log(plusMinus(arr));
 
-// or -gpt
+// or
 function miniMaxSum(arr) {
     arr.sort((a, b) => a - b);
     const totalSum = arr.reduce((acc, num) => acc + num, 0);
@@ -77,6 +90,28 @@ function timeConversion(s) {
         return s;
     }
 }
+
+// if(s.indexOf("PM")!==-1){
+//     s = s.replace("PM", "");
+//     if(s.slice(0,2) === "12"){
+//         return s;
+//     }
+//     let firstChar = s.slice(0,2);
+//     firstChar = parseInt(firstChar);
+//     firstChar = firstChar + 12;
+//     firstChar = firstChar.toString();
+//     s = s.replace(s.slice(0,2), firstChar);
+//     return s;
+// }
+// else if(s.indexOf("AM")!==-1){
+//     s = s.replace("AM", "");
+//     if(s.slice(0,2) === "12"){
+//         s = s.replace("12", "00")
+//         return s;
+//     }
+//     return s;
+// }
+
 
 //* Mock Test - median
 

@@ -56,3 +56,34 @@ function countingSort(arr) {
   }
   return list;
 }
+
+// day 2 end
+
+//----------------------------------------
+
+function countingSort(arr) {
+  let list={};
+
+  for(let num of arr){
+    if(list[num]){
+      list[num]++;
+    }
+    else{
+      list[num]=1;
+    }
+  }
+  // for (let num in list) {
+  //   list[num]--;
+  // } 
+  // console.log(list);
+
+  for (let key in list) {
+    console.log(key);
+  }
+//   const keys = Object.keys(list);
+//    keys.map((key, index) => {
+//     const value = list[key];
+//     console.log("Key:", key, "Value:", value);
+// });
+
+}
